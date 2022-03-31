@@ -672,7 +672,8 @@ env_vars.Add('CXXFLAGS',
 # Note: This probably is only really meaningful when configured via a variables file. It will
 # also override whatever the SCons platform defaults would be.
 env_vars.Add('ENV',
-    help='Sets the environment for subprocesses')
+    help='Sets the environment for subprocesses',
+    default=dict(os.environ))
 
 env_vars.Add('HOST_ARCH',
     help='Sets the native architecture of the compiler',
